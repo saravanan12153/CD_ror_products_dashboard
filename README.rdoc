@@ -1,28 +1,56 @@
-== README
+Products Dashboard I
+Let's say we have a model called Product with the following information:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+id
+name (string)
+description (text area)
+pricing (float)
+created_at
+updated_at
+Create the Product model using Rails. Then create all the RESTful methods and view files for the Products controller without using scaffolding. Type every single line of code so that you understand how this works. Your controller needs to have the following methods:
 
-Things you may want to cover:
+index
+show
+new
+edit
+create
+update
+destroy
+Part I
 
-* Ruby version
+Do this without using any form helper or simple_form (no need to use things like products_path, new_product_path, etc but instead type the direct URL in the form action attribute field).
 
-* System dependencies
+Part II
 
-* Configuration
+Also, create another model called Category with the following information:
 
-* Database creation
+id
+name (string)
+created_at
+updated_at
+Populate the Category table with the following information:
 
-* Database initialization
+category id 1 - Electronics
+category id 2 - Household
+category id 3 - Gardening
+category id 4 - Automotive
+category id 5 - Ninjas
+Create another field in the Products table called category_id that references the category table. In other words, a category can have many products (or a product belongs to a category).
 
-* How to run the test suite
+Allow the user to edit the product's category through /products/new and /products/[:id].
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Feel free to use components of Error Driven Development you learned in the previous section while working on this assignment. Again, no need to go to the extreme side of EDD but trying to incorporate a little bit of EDD in your workflow could always be helpful.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+Products Dashboard II
+
+In continuation with the previous project, now allow anyone to post comments for each product. The comment model should have the following fields:
+
+id
+comment (text area)
+product_id
+created_at
+updated_at
+Your application should also have a dashboard that displays all the comments along with all the product name associated with each comment.
