@@ -1,4 +1,5 @@
 Products Dashboard I
+
 Let's say we have a model called Product with the following information:
 
 id
