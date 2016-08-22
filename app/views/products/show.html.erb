@@ -16,7 +16,11 @@
                 <td><%= @product.name =%></td>
                 <td><%= @product.description =%></td>
                 <td>$<%= @product.pricing =%></td>
-                <td><%= @product.category.name =%></td>
+                <td>
+                    <% if product.category %>
+                        <%= @product.category.name %>
+                    <% end %>
+                </td>
                 </tr>
             </tbody>
         </table>

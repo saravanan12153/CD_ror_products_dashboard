@@ -17,10 +17,10 @@ class ProductsController < ApplicationController
     product = Product.new(name: params[:name], description: params[:description], pricing: params[:pricing], category: Category.find(params[:category]))
     if !product.valid?
     flash[:errors] = product.errors.full_messages
-    redirect_to 'products/new'
+    redirect_to 'products/new' # products_new_path
     else
     product.save
-    redirect_to '/'
+    redirect_to '/' # root_path
   end
   end
 
